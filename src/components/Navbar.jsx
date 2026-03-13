@@ -3,10 +3,9 @@ import { Link } from "react-router-dom"
 function Navbar(){
 
 const faculty=sessionStorage.getItem("faculty")
-const student=sessionStorage.getItem("student")
 
 const logout=()=>{
-sessionStorage.clear()
+sessionStorage.removeItem("faculty")
 window.location="/"
 }
 
@@ -16,18 +15,10 @@ return(
 
 <Link to="/">Home</Link>
 
-{!student && !faculty && (
+{!faculty && (
 <>
 <Link to="/register">Student Register</Link>
-<Link to="/studentlogin">Student Login</Link>
 <Link to="/facultylogin">Faculty Login</Link>
-</>
-)}
-
-{student && (
-<>
-<Link to="/studentdashboard">Student Dashboard</Link>
-<button onClick={logout}>Logout</button>
 </>
 )}
 

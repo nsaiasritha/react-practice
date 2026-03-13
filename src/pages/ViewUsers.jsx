@@ -1,4 +1,4 @@
-import { useEffect,useState } from "react"
+import { useEffect, useState } from "react"
 
 function ViewUsers(){
 
@@ -21,14 +21,12 @@ return(
 <table border="1">
 
 <thead>
-
 <tr>
 <th>Name</th>
 <th>Email</th>
 <th>Roll</th>
 <th>Branch</th>
 </tr>
-
 </thead>
 
 <tbody>
